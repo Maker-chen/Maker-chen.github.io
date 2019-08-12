@@ -313,6 +313,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/PEP 8风格指南/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/PEP 8风格指南/" itemprop="url">PEP 8风格指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="PEP-8风格指南"><a href="#PEP-8风格指南" class="headerlink" title="PEP 8风格指南"></a>PEP 8风格指南</h2><p>PEP是Python Enhancement Proposal的缩写，通常翻译为“Python增强提案”。每个PEP都是一份为Python社区提供的指导Python往更好的方向发展的技术文档，其中的第8号增强提案（PEP 8）是针对Python语言编订的代码风格指南。尽管我们可以在保证语法没有问题的前提下随意书写Python代码，但是在实际开发中，采用一致的风格书写出可读性强的代码是每个专业的程序员应该做到的事情，也是每个公司的编程规范中会提出的要求，这些在多人协作开发一个项目（团队开发）的时候显得尤为重要。我们可以从Python官方网站的<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">PEP 8链接</a>中找到该文档，下面我们对该文档的关键部分做一个简单的总结。</p>
+<h3 id="空格的使用"><a href="#空格的使用" class="headerlink" title="空格的使用"></a>空格的使用</h3><ol>
+<li><u>使用空格来表示缩进而不要用制表符（Tab）。</u>这一点对习惯了其他编程语言的人来说简直觉得不可理喻，因为绝大多数的程序员都会用Tab来表示缩进，但是要知道Python并没有像C/C++或Java那样的用花括号来构造一个代码块的语法，在Python中分支和循环结构都使用缩进来表示哪些代码属于同一个级别，鉴于此Python代码对缩进以及缩进宽度的依赖比其他很多语言都强得多。在不同的编辑器中，Tab的宽度可能是2、4或8个字符，甚至是其他更离谱的值，用Tab来表示缩进对Python代码来说可能是一场灾难。</li>
+<li><u>和语法相关的每一层缩进都用4个空格来表示。</u></li>
+<li><u>每行的字符数不要超过79个字符，如果表达式因太长而占据了多行，除了首行之外的其余各行都应该在正常的缩进宽度上再加上4个空格。</u></li>
+<li><u>函数和类的定义，代码前后都要用两个空行进行分隔。</u></li>
+<li><u>在同一个类中，各个方法之间应该用一个空行进行分隔。</u></li>
+<li><u>二元运算符的左右两侧应该保留一个空格，而且只要一个空格就好。</u></li>
+</ol>
+<h3 id="标识符命名"><a href="#标识符命名" class="headerlink" title="标识符命名"></a>标识符命名</h3><p>PEP 8倡导用不同的命名风格来命名Python中不同的标识符，以便在阅读代码时能够通过标识符的名称来确定该标识符在Python中扮演了怎样的角色（在这一点上，Python自己的内置模块以及某些第三方模块都做得并不是很好）。</p>
+<ol>
+<li><u>变量、函数和属性应该使用小写字母来拼写，如果有多个单词就使用下划线进行连接。</u></li>
+<li><u>类中受保护的实例属性，应该以一个下划线开头。</u></li>
+<li><u>类中私有的实例属性，应该以两个下划线开头。</u></li>
+<li><u>类和异常的命名，应该每个单词首字母大写。</u></li>
+<li><u>模块级别的常量，应该采用全大写字母，如果有多个单词就用下划线进行连接。</u></li>
+<li><u>类的实例方法，应该把第一个参数命名为<code>self</code>以表示对象自身。</u></li>
+<li><u>类的类方法，应该把第一个参数命名为<code>cls</code>以表示该类自身。</u></li>
+</ol>
+<h3 id="表达式和语句"><a href="#表达式和语句" class="headerlink" title="表达式和语句"></a>表达式和语句</h3><p>在Python之禅（可以使用<code>import this</code>查看）中有这么一句名言：“There should be one– and preferably only one –obvious way to do it.”，翻译成中文是“做一件事应该有而且最好只有一种确切的做法”，这句话传达的思想在PEP 8中也是无处不在的。</p>
+<ol>
+<li><u>采用内联形式的否定词，而不要把否定词放在整个表达式的前面。</u>例如<code>if a is not b</code>就比<code>if not a is b</code>更容易让人理解。</li>
+<li>不要用检查长度的方式来判断字符串、列表等是否为<code>None</code>或者没有元素，应该用<code>if not x</code>这样的写法来检查它。</li>
+<li><u>就算<code>if</code>分支、<code>for</code>循环、<code>except</code>异常捕获等中只有一行代码，也不要将代码和<code>if</code>、<code>for</code>、<code>except</code>等写在一起，分开写才会让代码更清晰。</u></li>
+<li><u><code>import</code>语句总是放在文件开头的地方。</u></li>
+<li><u>引入模块的时候，<code>from math import sqrt</code>比<code>import math</code>更好。</u></li>
+<li><u>如果有多个<code>import</code>语句，应该将其分为三部分，从上到下分别是Python标准模块、第三方模块和自定义模块，每个部分内部应该按照模块名称的字母表顺序来排列。</u></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/Python参考书籍/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -489,6 +658,1187 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/Python惯例/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/Python惯例/" itemprop="url">python惯例</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Python惯例"><a href="#Python惯例" class="headerlink" title="Python惯例"></a>Python惯例</h2><p>“惯例”这个词指的是“习惯的做法，常规的办法，一贯的做法”，与这个词对应的英文单词叫“idiom”。由于Python跟其他很多编程语言在语法和使用上还是有比较显著的差别，因此作为一个Python开发者如果不能掌握这些惯例，就无法写出“Pythonic”的代码。下面我们总结了一些在Python开发中的惯用的代码。</p>
+<ol>
+<li><p>让代码既可以被导入又可以被执行。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用下面的方式判断逻辑“真”或“假”。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x:</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> x:</span><br></pre></td></tr></table></figure>
+<p><strong>好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">'jackfrued'</span></span><br><span class="line">fruits = [<span class="string">'apple'</span>, <span class="string">'orange'</span>, <span class="string">'grape'</span>]</span><br><span class="line">owners = &#123;<span class="string">'1001'</span>: <span class="string">'骆昊'</span>, <span class="string">'1002'</span>: <span class="string">'王大锤'</span>&#125;</span><br><span class="line"><span class="keyword">if</span> name <span class="keyword">and</span> fruits <span class="keyword">and</span> owners:</span><br><span class="line">    print(<span class="string">'I love fruits!'</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>不好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">'jackfrued'</span></span><br><span class="line">fruits = [<span class="string">'apple'</span>, <span class="string">'orange'</span>, <span class="string">'grape'</span>]</span><br><span class="line">owners = &#123;<span class="string">'1001'</span>: <span class="string">'骆昊'</span>, <span class="string">'1002'</span>: <span class="string">'王大锤'</span>&#125;</span><br><span class="line"><span class="keyword">if</span> name != <span class="string">''</span> <span class="keyword">and</span> len(fruits) &gt; <span class="number">0</span> <span class="keyword">and</span> owners != &#123;&#125;:</span><br><span class="line">    print(<span class="string">'I love fruits!'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>善于使用in运算符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x <span class="keyword">in</span> items: <span class="comment"># 包含</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> items: <span class="comment"># 迭代</span></span><br></pre></td></tr></table></figure>
+<p><strong>好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">'Hao LUO'</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">'L'</span> <span class="keyword">in</span> name:</span><br><span class="line">    print(<span class="string">'The name has an L in it.'</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>不好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">'Hao LUO'</span></span><br><span class="line"><span class="keyword">if</span> name.find(<span class="string">'L'</span>) != <span class="number">-1</span>:</span><br><span class="line">    print(<span class="string">'This name has an L in it!'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不使用临时变量交换两个值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b = b, a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用序列构建字符串。</p>
+<p><strong>好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="string">'j'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'k'</span>, <span class="string">'f'</span>, <span class="string">'r'</span>, <span class="string">'u'</span>, <span class="string">'e'</span>, <span class="string">'d'</span>]</span><br><span class="line">name = <span class="string">''</span>.join(chars)</span><br><span class="line">print(name)  <span class="comment"># jackfrued</span></span><br></pre></td></tr></table></figure>
+<p><strong>不好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="string">'j'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'k'</span>, <span class="string">'f'</span>, <span class="string">'r'</span>, <span class="string">'u'</span>, <span class="string">'e'</span>, <span class="string">'d'</span>]</span><br><span class="line">name = <span class="string">''</span></span><br><span class="line"><span class="keyword">for</span> char <span class="keyword">in</span> chars:</span><br><span class="line">    name += char</span><br><span class="line">print(name)  <span class="comment"># jackfrued</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>EAFP优于LBYL。</p>
+<p>EAFP - <strong>E</strong>asier to <strong>A</strong>sk <strong>F</strong>orgiveness than <strong>P</strong>ermission.</p>
+<p>LBYL - <strong>L</strong>ook <strong>B</strong>efore <strong>Y</strong>ou <strong>L</strong>eap.</p>
+<p><strong>好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">'x'</span>: <span class="string">'5'</span>&#125;</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    value = int(d[<span class="string">'x'</span>])</span><br><span class="line">    print(value)</span><br><span class="line"><span class="keyword">except</span> (KeyError, TypeError, ValueError):</span><br><span class="line">    value = <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
+<p><strong>不好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">d = &#123;<span class="string">'x'</span>: <span class="string">'5'</span>&#125;</span><br><span class="line"><span class="keyword">if</span> <span class="string">'x'</span> <span class="keyword">in</span> d <span class="keyword">and</span> isinstance(d[<span class="string">'x'</span>], str) \</span><br><span class="line">		<span class="keyword">and</span> d[<span class="string">'x'</span>].isdigit():</span><br><span class="line">    value = int(d[<span class="string">'x'</span>])</span><br><span class="line">    print(value)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    value = <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用enumerate进行迭代。</p>
+<p><strong>好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fruits = [<span class="string">'orange'</span>, <span class="string">'grape'</span>, <span class="string">'pitaya'</span>, <span class="string">'blueberry'</span>]</span><br><span class="line"><span class="keyword">for</span> index, fruit <span class="keyword">in</span> enumerate(fruits):</span><br><span class="line">	print(index, <span class="string">':'</span>, fruit)</span><br></pre></td></tr></table></figure>
+<p><strong>不好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fruits = [<span class="string">'orange'</span>, <span class="string">'grape'</span>, <span class="string">'pitaya'</span>, <span class="string">'blueberry'</span>]</span><br><span class="line">index = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:</span><br><span class="line">    print(index, <span class="string">':'</span>, fruit)</span><br><span class="line">    index += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用生成式生成列表。</p>
+<p><strong>好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">7</span>, <span class="number">20</span>, <span class="number">3</span>, <span class="number">15</span>, <span class="number">11</span>]</span><br><span class="line">result = [num * <span class="number">3</span> <span class="keyword">for</span> num <span class="keyword">in</span> data <span class="keyword">if</span> num &gt; <span class="number">10</span>]</span><br><span class="line">print(result)  <span class="comment"># [60, 45, 33]</span></span><br></pre></td></tr></table></figure>
+<p><strong>不好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">7</span>, <span class="number">20</span>, <span class="number">3</span>, <span class="number">15</span>, <span class="number">11</span>]</span><br><span class="line">result = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">if</span> i &gt; <span class="number">10</span>:</span><br><span class="line">        result.append(i * <span class="number">3</span>)</span><br><span class="line">print(result)  <span class="comment"># [60, 45, 33]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用zip组合键和值来创建字典。</p>
+<p><strong>好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">keys = [<span class="string">'1001'</span>, <span class="string">'1002'</span>, <span class="string">'1003'</span>]</span><br><span class="line">values = [<span class="string">'骆昊'</span>, <span class="string">'王大锤'</span>, <span class="string">'白元芳'</span>]</span><br><span class="line">d = dict(zip(keys, values))</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+<p><strong>不好</strong>的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">keys = [<span class="string">'1001'</span>, <span class="string">'1002'</span>, <span class="string">'1003'</span>]</span><br><span class="line">values = [<span class="string">'骆昊'</span>, <span class="string">'王大锤'</span>, <span class="string">'白元芳'</span>]</span><br><span class="line">d = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> i, key <span class="keyword">in</span> enumerate(keys):</span><br><span class="line">    d[key] = values[i]</span><br><span class="line">print(d)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p><strong>说明</strong>：这篇文章的内容来自于网络，有兴趣的读者可以阅读<a href="http://safehammad.com/downloads/python-idioms-2014-01-16.pdf" target="_blank" rel="noopener">原文</a>。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/常见反爬策略及应对方案/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/常见反爬策略及应对方案/" itemprop="url">常见反爬策略及应对方案</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="常见反爬策略及应对方案"><a href="#常见反爬策略及应对方案" class="headerlink" title="常见反爬策略及应对方案"></a>常见反爬策略及应对方案</h2><ol>
+<li><p>构造合理的HTTP请求头。</p>
+<ul>
+<li><p>Accept</p>
+</li>
+<li><p>User-Agent - 三方库fake-useragent</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fake_useragent <span class="keyword">import</span> UserAgent</span><br><span class="line">ua = UserAgent()</span><br><span class="line"></span><br><span class="line">ua.ie</span><br><span class="line"><span class="comment"># Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US);</span></span><br><span class="line">ua.msie</span><br><span class="line"><span class="comment"># Mozilla/5.0 (compatible; MSIE 10.0; Macintosh; Intel Mac OS X 10_7_3; Trident/6.0)'</span></span><br><span class="line">ua[<span class="string">'Internet Explorer'</span>]</span><br><span class="line"><span class="comment"># Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; GTB7.4; InfoPath.2; SV1; .NET CLR 3.3.69573; WOW64; en-US)</span></span><br><span class="line">ua.opera</span><br><span class="line"><span class="comment"># Opera/9.80 (X11; Linux i686; U; ru) Presto/2.8.131 Version/11.11</span></span><br><span class="line">ua.chrome</span><br><span class="line"><span class="comment"># Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2'</span></span><br><span class="line">ua.google</span><br><span class="line"><span class="comment"># Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13</span></span><br><span class="line">ua[<span class="string">'google chrome'</span>]</span><br><span class="line"><span class="comment"># Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11</span></span><br><span class="line">ua.firefox</span><br><span class="line"><span class="comment"># Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1</span></span><br><span class="line">ua.ff</span><br><span class="line"><span class="comment"># Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:15.0) Gecko/20100101 Firefox/15.0.1</span></span><br><span class="line">ua.safari</span><br><span class="line"><span class="comment"># Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># and the best one, random via real world browser usage statistic</span></span><br><span class="line">ua.random</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Referer</p>
+</li>
+<li><p>Accept-Encoding</p>
+</li>
+<li><p>Accept-Language</p>
+</li>
+</ul>
+</li>
+<li>检查网站生成的Cookie。<ul>
+<li>有用的插件：<a href="http://www.editthiscookie.com/" target="_blank" rel="noopener">EditThisCookie</a></li>
+<li>如何处理脚本动态生成的Cookie</li>
+</ul>
+</li>
+<li>抓取动态内容。<ul>
+<li>Selenium + WebDriver</li>
+<li>Chrome / Firefox - Driver</li>
+</ul>
+</li>
+<li>限制爬取的速度。</li>
+<li>处理表单中的隐藏域。<ul>
+<li>在读取到隐藏域之前不要提交表单</li>
+<li>用RoboBrowser这样的工具辅助提交表单</li>
+</ul>
+</li>
+<li><p>处理表单中的验证码。</p>
+<ul>
+<li><p>OCR（Tesseract） - 商业项目一般不考虑 </p>
+</li>
+<li><p>专业识别平台 - 超级鹰 / 云打码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChaoClient</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, username, password, soft_id)</span>:</span></span><br><span class="line">        self.username = username</span><br><span class="line">        password =  password.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">        self.password = md5(password).hexdigest()</span><br><span class="line">        self.soft_id = soft_id</span><br><span class="line">        self.base_params = &#123;</span><br><span class="line">            <span class="string">'user'</span>: self.username,</span><br><span class="line">            <span class="string">'pass2'</span>: self.password,</span><br><span class="line">            <span class="string">'softid'</span>: self.soft_id,</span><br><span class="line">        &#125;</span><br><span class="line">        self.headers = &#123;</span><br><span class="line">            <span class="string">'Connection'</span>: <span class="string">'Keep-Alive'</span>,</span><br><span class="line">            <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)'</span>,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">post_pic</span><span class="params">(self, im, codetype)</span>:</span></span><br><span class="line">        params = &#123;</span><br><span class="line">            <span class="string">'codetype'</span>: codetype,</span><br><span class="line">        &#125;</span><br><span class="line">        params.update(self.base_params)</span><br><span class="line">        files = &#123;<span class="string">'userfile'</span>: (<span class="string">'captcha.jpg'</span>, im)&#125;</span><br><span class="line">        r = requests.post(<span class="string">'http://upload.chaojiying.net/Upload/Processing.php'</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">        <span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    client = ChaoClient(<span class="string">'用户名'</span>, <span class="string">'密码'</span>, <span class="string">'软件ID'</span>)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'captcha.jpg'</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> file:                                                </span><br><span class="line">        print(client.post_pic(file, <span class="number">1902</span>))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>绕开“陷阱”。</p>
+<ul>
+<li>网页上有诱使爬虫爬取的爬取的隐藏链接（陷阱或蜜罐）</li>
+<li>通过Selenium+WebDriver+Chrome判断链接是否可见或在可视区域</li>
+</ul>
+</li>
+<li><p>隐藏身份。</p>
+<ul>
+<li><p>代理服务 -  快代理 / 讯代理 / 芝麻代理 / 蘑菇代理 / 云代理</p>
+<p><a href="https://cuiqingcai.com/5094.html" target="_blank" rel="noopener">《爬虫代理哪家强？十大付费代理详细对比评测出炉！》</a></p>
+</li>
+<li><p>洋葱路由 - 国内需要翻墙才能使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yum -y install tor</span><br><span class="line">useradd admin -d /home/admin</span><br><span class="line">passwd admin</span><br><span class="line">chown -R admin:admin /home/admin</span><br><span class="line">chown -R admin:admin /var/run/tor</span><br><span class="line">tor</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/玩转PyCharm/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/玩转PyCharm/" itemprop="url">玩转pycharm</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="玩转PyCharm"><a href="#玩转PyCharm" class="headerlink" title="玩转PyCharm"></a>玩转PyCharm</h2><p>PyCharm是由JetBrains公司开发的提供给Python专业的开发者的一个集成开发环境，它最大的优点是能够大大提升Python开发者的工作效率，为开发者集成了很多用起来非常顺手的功能，包括代码调试、高亮语法、代码跳转、智能提示、自动补全、单元测试、版本控制等等。此外，PyCharm还提供了对一些高级功能的支持，包括支持基于Django框架的Web开发、。</p>
+<h3 id="PyCharm的安装"><a href="#PyCharm的安装" class="headerlink" title="PyCharm的安装"></a>PyCharm的安装</h3><p>可以在<a href="">JetBrains公司的官方网站</a>找到PyCharm的<a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">下载链接</a>，有两个可供下载的版本一个是社区版一个是专业版，社区版在<a href="https://zh.wikipedia.org/wiki/Apache%E8%AE%B8%E5%8F%AF%E8%AF%81" target="_blank" rel="noopener">Apache许可证</a>下发布，专业版在专用许可证下发布（需要购买授权下载后可试用30天），其拥有许多额外功能。安装PyCharm需要有JRE（Java运行时环境）的支持，如果没有可以在安装过程中选择在线下载安装。</p>
+<blockquote>
+<p>说明：如果你是一名学生，希望购买PyCharm来使用，可以看看<a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369" target="_blank" rel="noopener">教育优惠官方申请指南</a>。</p>
+</blockquote>
+<h3 id="首次使用的设置"><a href="#首次使用的设置" class="headerlink" title="首次使用的设置"></a>首次使用的设置</h3><p>第一次使用PyCharm时，会有一个导入设置的向导，如果之前没有使用PyCharm或者没有保存过设置的就直接选择“Do not import settings”进入下一步即可。</p>
+<p><img src="./res/pycharm-import-settings.png" alt=""></p>
+<p>专业版的PyCharm是需要激活的，<strong>强烈建议为优秀的软件支付费用</strong>，如果不用做商业用途，我们可以暂时选择试用30天或者使用社区版的PyCharm。</p>
+<p><img src="./res/pycharm-activate.png" alt=""></p>
+<p> 接下来是选择UI主题，这个可以根据个人喜好进行选择。</p>
+<p><img src="./res/pycharm-set-ui-theme.png" alt=""></p>
+<p> 再接下来是创建可以在终端（命令行）中使用PyCharm项目的启动脚本，当然也可以直接跳过这一步。</p>
+<p><img src="./res/pycharm-create-launcher-script.png" alt=""></p>
+<p>然后可以选择需要安装哪些插件，我们可以暂时什么都不安装等需要的时候再来决定。</p>
+<p><img src="./res/pycharm-plugins.png" alt=""></p>
+<h3 id="用PyCharm创建项目"><a href="#用PyCharm创建项目" class="headerlink" title="用PyCharm创建项目"></a>用PyCharm创建项目</h3><p>点击上图中的“Start using PyCharm”按钮就可以开始使用PyCharm啦，首先来到的是一个欢迎页，在欢迎页上我们可以选择“创建新项目”、“打开已有项目”和“从版本控制系统中检出项目”。</p>
+<p><img src="./res/pycharm-welcome.png" alt=""></p>
+<p>如果选择了“Create New Project”来创建新项目就会打一个创建项目的向导页。</p>
+<p><img src="./res/pycharm-new-project.png" alt=""></p>
+<p>在如上图所示的界面中，我们可以选择创建项目的模板，包括了纯Python项目、基于各种不同框架的Web项目、Web前端项目、跨平台项目等各种不同的项目模板。如果选择Python的项目，那么有一个非常重要的设定是选择“New environment…”（创建新的虚拟环境）还是使用“Existing Interpreter”（已经存在的解释器）。前者肯定是更好的选择，因为新的虚拟环境不会对系统环境变量中配置的Python环境造成影响，简单举个例子就是你在虚拟环境下安装或者更新了任何三方库，它并不会对系统原有的Python解释器造成任何的影响，但代价是需要额外的存储空间来建立这个虚拟环境。</p>
+<p>项目创建完成后就可以开始新建各种文件来书写Python代码了。</p>
+<p><img src="./res/pycharm-workspace.png" alt=""></p>
+<p>在工作窗口的右键菜单中可以找到“Run …”和“Debug …”菜单项，通过这两个菜单项我们就可以运行和调试我们的代码啦。建议关注一下菜单栏中的“Code”、“Refactor”和“Tools”菜单，这里面为编写Python代码提供了很多有用的帮助。</p>
+<h3 id="创建Django项目"><a href="#创建Django项目" class="headerlink" title="创建Django项目"></a>创建Django项目</h3><h4 id="专业版"><a href="#专业版" class="headerlink" title="专业版"></a>专业版</h4><p>PyCharm专业版提供了对Django、Flask、Google App Engine、web2py等Python Web框架以及SQL、UML、前端语言和框架、远程调试、虚拟化部署等功能的支持，如果使用PyCharm专业版，在创建项目时可以直接选择创建Django项目并设置模板语言以及放置模板页的文件夹。</p>
+<p><img src="./res/pycharm-prof-django-3.png" alt=""></p>
+<p>创建好项目之后，打开终端输入<code>pip list</code>命令，可以看到项目所需的依赖项已经安装好了，而且可以直接点击屏幕右上方的运行或调试按钮来直接运行Django项目。</p>
+<p><img src="./res/pycharm-prof-django-2.png" alt=""></p>
+<h4 id="社区版"><a href="#社区版" class="headerlink" title="社区版"></a>社区版</h4><p>PyCharm社区版只能创建Python项目，如果项目中需要Django的支持，可以自行安装依赖库并创建Django项目。</p>
+<p><img src="./res/pycharm-comm-django-1.png" alt=""></p>
+<p>创建好Python项目之后，可以打开屏幕下方的终端（Terminal），并通过<code>pip install</code>安装Django项目的依赖项。</p>
+<p><img src="./res/pycharm-comm-django-2.png" alt=""></p>
+<p>当然也可以在项目的设置菜单中找到解释器配置，并选择要添加的依赖项。</p>
+<p><img src="./res/pycharm-comm-django-7.png" alt=""></p>
+<p><img src="./res/pycharm-comm-django-8.png" alt=""></p>
+<p>接下来可以在终端中输入<code>django-amdin startproject</code>指令来创建项目。</p>
+<p><img src="./res/pycharm-comm-django-3.png" alt=""></p>
+<p>如果要运行项目，可以在终端中输入<code>python manage.py runserver</code>启动测试服务器。当然，也可以点击屏幕右上方的“Add Configuration”按钮，进入如下所示的配置界面，并点击窗口左上角的“+”来添加一个运行配置。</p>
+<p><img src="./res/pycharm-comm-django-4.png" alt=""></p>
+<p>在配置窗口的右侧，指定要执行的脚本路径（Django项目的manage.py文件的位置）和运行参数（runserver）。</p>
+<p><img src="./res/pycharm-comm-django-5.png" alt=""></p>
+<p>注意到窗口的右上角了吗？现在可以点击运行或调试按钮来启动测试服务器运行项目了。</p>
+<p><img src="./res/pycharm-comm-django-6.png" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/用函数还是用复杂的表达式/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/用函数还是用复杂的表达式/" itemprop="url">要不要使用复杂表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="要不要使用复杂表达式"><a href="#要不要使用复杂表达式" class="headerlink" title="要不要使用复杂表达式"></a>要不要使用复杂表达式</h2><p>Perl语言的原作者Larry Wall曾经说过，伟大的程序员都有三个优点：懒惰、暴躁和自负。乍一看这三个词语没有一个是褒义词，但在程序员的世界里，这三个词有不同的意义。首先，懒惰会促使程序员去写一些省事儿的程序来辅助自己或别人更好的完成工作，这样我们就无需做那些重复和繁琐的劳动；同理能够用3行代码解决的事情，我们也绝不会写出10行代码来。其次，暴躁会让程序员主动的去完成一些你还没有提出的工作，去优化自己的代码让它更有效率，能够3秒钟完成的任务，我们绝不能容忍1分钟的等待。最后，自负会促使程序员写出可靠无误的代码，我们写代码不是为了接受批评和指责，而是为了让其他人来膜拜。</p>
+<p>那么接下来就有一个很有意思的问题值得探讨一下，我们需要一个程序从输入的三个数中找出最大的那个数。这个程序对任何会编程的人来说都是小菜一碟，甚至不会编程的人经过10分钟的学习也能搞定。下面是用来解决这个问题的Python代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = int(input(<span class="string">'a = '</span>))</span><br><span class="line">b = int(input(<span class="string">'b = '</span>))</span><br><span class="line">c = int(input(<span class="string">'c = '</span>))</span><br><span class="line"><span class="keyword">if</span> a &gt; b:</span><br><span class="line">	the_max = a</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	the_max = b</span><br><span class="line"><span class="keyword">if</span> c &gt; the_max:</span><br><span class="line">	the_max = c</span><br><span class="line">print(<span class="string">'The max is:'</span>, the_max)</span><br></pre></td></tr></table></figure>
+<p>但是我们刚才说了，程序员都是懒惰的，很多程序员都会使用三元条件运算符来改写上面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = int(input(<span class="string">'a = '</span>))</span><br><span class="line">b = int(input(<span class="string">'b = '</span>))</span><br><span class="line">c = int(input(<span class="string">'c = '</span>))</span><br><span class="line">the_max = a <span class="keyword">if</span> a &gt; b <span class="keyword">else</span> b</span><br><span class="line">the_max = c <span class="keyword">if</span> c &gt; the_max <span class="keyword">else</span> the_max</span><br><span class="line">print(<span class="string">'The max is:'</span>, the_max)</span><br></pre></td></tr></table></figure>
+<p>需要说明的是，Python在2.5版本以前是没有上面代码第4行和第5行中使用的三元条件运算符的，究其原因是Guido van Rossum（Python之父）认为三元条件运算符并不能帮助 Python变得更加简洁，于是那些习惯了在C/C++或Java中使用三元条件运算符（在这些语言中，三元条件运算符也称为“Elvis运算符”，因为<code>?:</code>放在一起很像著名摇滚歌手猫王Elvis的大背头）的程序员试着用<code>and</code>和<code>or</code>运算符的短路特性来模拟出三元操作符，于是在那个年代，上面的代码是这样写的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = int(input(<span class="string">'a = '</span>))</span><br><span class="line">b = int(input(<span class="string">'b = '</span>))</span><br><span class="line">c = int(input(<span class="string">'c = '</span>))</span><br><span class="line">the_max = a &gt; b <span class="keyword">and</span> a <span class="keyword">or</span> b</span><br><span class="line">the_max = c &gt; the_max <span class="keyword">and</span> c <span class="keyword">or</span> the_max</span><br><span class="line">print(<span class="string">'The max is:'</span>, the_max)</span><br></pre></td></tr></table></figure>
+<p>但是这种做法在某些场景下是不能成立的，且看下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">0</span></span><br><span class="line">b = <span class="number">-100</span></span><br><span class="line"><span class="comment"># 下面的代码本来预期输出a的值，结果却得到了b的值</span></span><br><span class="line"><span class="comment"># 因为a的值0在进行逻辑运算时会被视为False来处理</span></span><br><span class="line">print(<span class="keyword">True</span> <span class="keyword">and</span> a <span class="keyword">or</span> b)</span><br><span class="line"><span class="comment"># print(a if True else b)</span></span><br></pre></td></tr></table></figure>
+<p>所以在Python 2.5以后引入了三元条件运算符来避免上面的风险（上面代码被注释掉的最后一句话）。那么，问题又来了，上面的代码还可以写得更简短吗？答案是肯定的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = int(input(<span class="string">'a = '</span>))</span><br><span class="line">b = int(input(<span class="string">'b = '</span>))</span><br><span class="line">c = int(input(<span class="string">'c = '</span>))</span><br><span class="line">print(<span class="string">'The max is:'</span>, (a <span class="keyword">if</span> a &gt; b <span class="keyword">else</span> b) <span class="keyword">if</span> (a <span class="keyword">if</span> a &gt; b <span class="keyword">else</span> b) &gt; c <span class="keyword">else</span> c)</span><br></pre></td></tr></table></figure>
+<p>但是，这样做真的好吗？如此复杂的表达式是不是让代码变得晦涩了很多呢？我们发现，在实际开发中很多开发者都喜欢过度的使用某种语言的特性或语法糖，于是简单的多行代码变成了复杂的单行表达式，这样做真的好吗？这个问题我也不止一次的问过自己，现在我能给出的答案是下面的代码，使用辅助函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">the_max</span><span class="params">(x, y)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x <span class="keyword">if</span> x &gt; y <span class="keyword">else</span> y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = int(input(<span class="string">'a = '</span>))</span><br><span class="line">b = int(input(<span class="string">'b = '</span>))</span><br><span class="line">c = int(input(<span class="string">'c = '</span>))</span><br><span class="line">print(<span class="string">'The max is:'</span>, the_max(the_max(a, b), c))</span><br></pre></td></tr></table></figure>
+<p>上面的代码中，我定义了一个辅助函数<code>the_max</code>用来找出参数传入的两个值中较大的那一个，于是下面的输出语句可以通过两次调用<code>the_max</code>函数来找出三个数中的最大值，现在代码的可读性是不是好了很多。用辅助函数来替代复杂的表达式真的是一个不错的选择，关键是比较大小的逻辑转移到这个辅助函数后不仅可以反复调用它，而且还可以进行级联操作。</p>
+<p>当然，很多语言中比较大小的函数根本没有必要自己来实现（通常都是内置函数），Python也是如此。Python内置的max函数利用了Python对可变参数的支持，允许一次性传入多个值或者一个迭代器并找出那个最大值，所以上面讨论的问题在Python中也就是一句话的事，但是从复杂表达式到使用辅助函数简化复杂表达式这个思想是非常值得玩味的，所以分享出来跟大家做一个交流。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = int(input(<span class="string">'a = '</span>))</span><br><span class="line">b = int(input(<span class="string">'b = '</span>))</span><br><span class="line">c = int(input(<span class="string">'c = '</span>))</span><br><span class="line">print(<span class="string">'The max is:'</span>, max(a, b, c))</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/知乎问题回答/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/知乎问题回答/" itemprop="url">知乎问题回答</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="知乎问题回答"><a href="#知乎问题回答" class="headerlink" title="知乎问题回答"></a>知乎问题回答</h2><h3 id="Python学习完基础语法知识后，如何进一步提高？"><a href="#Python学习完基础语法知识后，如何进一步提高？" class="headerlink" title="Python学习完基础语法知识后，如何进一步提高？"></a>Python学习完基础语法知识后，如何进一步提高？</h3><p>如果你已经完成了Python基础语法的学习，想要知道接下来如何提高，那么你得先问问自己你要用Python来做什么？目前学习Python后可能的就业方向包括以下几个领域，我把每个领域需要的技术作为了一个简单的关键词摘要。</p>
+<blockquote>
+<p>说明：以下数据参考了主要的招聘门户网站以及职友集。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>职位</th>
+<th>所需技能</th>
+<th>招聘需求量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python后端开发工程师</td>
+<td>Python基础<br>Django / Flask / Tornado / Sanic<br>RESTful / 接口文档撰写<br>MySQL / Redis / MongoDB / ElasticSearch<br>Linux / Git / Scrum / PyCharm</td>
+<td>大</td>
+</tr>
+<tr>
+<td>Python爬虫开发工程师</td>
+<td>Python基础<br>常用标准库和三方库<br>Scrapy / PySpider<br>Selenium / Appnium<br>Redis / MongoDB / MySQL<br>前端 / HTTP(S) / 抓包工具</td>
+<td>较少</td>
+</tr>
+<tr>
+<td>Python量化交易开发工程师</td>
+<td>Python基础<br>数据结构 / 算法 / 设计模式<br>NoSQL（KV数据库）<br>金融学（两融、期权、期货、股票） / 数字货币</td>
+<td>较大（一线城市）</td>
+</tr>
+<tr>
+<td>Python数据分析工程师 /<br>Python机器学习工程师</td>
+<td>统计学专业 / 数学专业 / 计算机专业<br>Python基础 / 算法设计<br>SQL / NoSQL / Hive / Hadoop / Spark<br>NumPy / Scikit-Learn / Pandas / Seaborn<br>PyTorch / Tensorflow / OpenCV</td>
+<td>较大（一线城市）</td>
+</tr>
+<tr>
+<td>Python自动化测试工程师</td>
+<td>Python基础 / 单元测试 / 软件测试基础<br>Linux / Shell / JIRA / 禅道 / Jenkins / CI / CD<br>Selenium / Robot Framework / Appnium<br>ab / sysbench / JMeter / LoadRunner / QTP</td>
+<td>大</td>
+</tr>
+<tr>
+<td>Python自动化运维工程师</td>
+<td>Python基础 / Linux / Shell <br>Fabric / Ansible / Playbook<br>Zabbix / Saltstack / Puppet<br>Docker / paramiko</td>
+<td>较大（一线城市）</td>
+</tr>
+<tr>
+<td>Python云平台开发工程师</td>
+<td>Python基础<br>OpenStack / CloudStack<br>Ovirt / KVM<br>Docker / K8S</td>
+<td>较少（一线城市）</td>
+</tr>
+</tbody>
+</table>
+<p>如果弄清了自己将来要做的方向，就可以开始有针对性的学习了，下面给大家一个推荐书籍的清单。</p>
+<ol>
+<li>入门读物<ul>
+<li>《Python基础教程》（<em>Beginning Python From Novice to Professional</em>）</li>
+<li>《Python学习手册》（<em>Learning Python</em>）</li>
+<li>《Python编程》（<em>Programming Python</em>）</li>
+<li>《Python编程从入门到实践》（<em>Python Crash Course</em>）</li>
+<li>《Python Cookbook》</li>
+</ul>
+</li>
+<li>进阶读物<ul>
+<li>《软件架构 - Python语言实现》（<em>Software Architecture with Python</em>）</li>
+<li>《流畅的Python》（<em>Fluent Python</em>）</li>
+<li>《Python设计模式》（<em>Learning Python Design Patterns</em>）</li>
+<li>《Python高级编程》（<em>Expert Python Programming</em>）</li>
+<li>《Python性能分析与优化》（<em>Mastering Python High Performance</em>）</li>
+</ul>
+</li>
+<li>数据库相关<ul>
+<li>《MySQL必知必会》（<em>MySQL Crash Course</em>）</li>
+<li>《深入浅出MySQL - 数据库开发、优化与管理维护》</li>
+<li>《MongoDB权威指南》（<em>MongoDB: The Definitive Guide</em>）</li>
+<li>《Redis实战》（<em>Redis in Action</em>）</li>
+<li>《Redis开发与运维》</li>
+</ul>
+</li>
+<li>Linux / Shell / Docker / 运维<ul>
+<li>《鸟哥的Linux私房菜》</li>
+<li>《Linux命令行与shell脚本编程大全》（<em>Linux Command Line and Shell Scripting Bible</em>）</li>
+<li>《Python自动化运维:技术与最佳实践》</li>
+<li>《第一本Docker书》（<em>The Docker Book</em>）</li>
+<li>《Docker经典实例》（Docker Cookbook）</li>
+</ul>
+</li>
+<li><p>Django / Flask / Tornado</p>
+<ul>
+<li><p>《Django基础教程》（<em>Tango with Django</em>）</p>
+</li>
+<li><p>《轻量级Django》（<em>Lightweight Django</em>）</p>
+</li>
+<li><p>《精通Django》（<em>Mastering Django: Core</em>）</p>
+</li>
+<li><p>《Python Web开发：测试驱动方法》（<em>Test-Driven Development with Python</em>）</p>
+</li>
+<li><p>《Two Scoops of Django: Best Practice of Django 1.8》</p>
+</li>
+<li><p>《Flask Web开发：基于Python的Web应用开发实战》（<em>Flask Web Development: Developing Web Applications with Python</em>）</p>
+</li>
+<li><p>《深入理解Flask》（<em>Mastering Flask</em>）</p>
+</li>
+<li><p>《Introduction to Tornado》</p>
+</li>
+</ul>
+</li>
+<li><p>爬虫开发</p>
+<ul>
+<li><p>《用Python写网络爬虫》（<em>Web Scraping with Python</em>）</p>
+</li>
+<li><p>《精通Python爬虫框架Scrapy》（<em>Learning Scrapy</em>）</p>
+</li>
+<li><p>《Python网络数据采集》（<em>Web Scraping with Python</em>）</p>
+</li>
+<li><p>《Python爬虫开发与项目实战》</p>
+</li>
+<li><p>《Python 3网络爬虫开发实战》</p>
+</li>
+</ul>
+</li>
+<li><p>数据分析</p>
+<ul>
+<li>《利用Python进行数据分析》（<em>Python for Data Analysis</em>）</li>
+<li>《Python数据科学手册》（<em>Python Data Science Handbook</em>）</li>
+<li>《Python金融大数据分析》（<em>Python for Finance</em>）</li>
+<li>《Python数据可视化编程实战》（<em>Python Data Visualization Cookbook</em>）</li>
+<li>《Python数据处理》（<em>Data Wrangling with Python</em>）</li>
+</ul>
+</li>
+<li><p>机器学习</p>
+<ul>
+<li><p>《Python机器学习基础教程》（<em>Introduction to Machine Learning with Python</em>）</p>
+</li>
+<li><p>《Python机器学习实践指南》（<em>Python Machine Learning Blueprints</em>）</p>
+</li>
+<li><p>《Python机器学习实践：测试驱动的开发方法》（<em>Thoughtful Machine Learning with Python A Test Driven Approach</em>）</p>
+</li>
+<li>《Python机器学习经典实例》（<em>Python Machine Learning Cookbook</em>）</li>
+<li>《TensorFlow：实战Google深度学习框架》</li>
+</ul>
+</li>
+<li><p>其他书籍</p>
+<ul>
+<li>《Pro Git》</li>
+<li>《Selenium自动化测试 - 基于Python语言》（<em>Learning Selenium Testing Tools with Python</em>）</li>
+<li>《Selenium自动化测试之道》</li>
+<li>《Scrum敏捷软件开发》（<em>Software Development using Scrum</em>）</li>
+<li>《高效团队开发 - 工具与方法》</li>
+</ul>
+</li>
+</ol>
+<p>当然学习编程，最重要的通过项目实战来提升自己的综合能力，Github上有大量的优质开源项目，其中不乏优质的Python项目。有一个名为<a href="https://github.com/mahmoud/awesome-python-applications" target="_blank" rel="noopener">“awesome-python-applications”</a>的项目对这些优质的资源进行了归类并提供了传送门，大家可以了解下。如果自学能力不是那么强，可以通过网络上免费或者付费的视频课程来学习对应的知识；如果自律性没有那么强，那就只能建议花钱参加培训班了，因为花钱在有人监督的环境下学习对很多人来说确实是一个捷径，但是要记得：“师傅领进门，修行靠各人”。选择自己热爱的东西并全力以赴，不要盲目的跟风学习，这一点算是过来人的忠告吧。记得我自己刚开始进入软件开发这个行业时，有人跟我说过这么一句话，现在也分享出来与诸君共勉：“浮躁的人有两种：只观望而不学习的人，只学习而不坚持的人；浮躁的人都不是高手。”</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Maker-chen.github.io/2019/08/12/那些年我们踩过的那些坑/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/12/那些年我们踩过的那些坑/" itemprop="url">那些年我们踩过的那些坑</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">
+                2019-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="那些年我们踩过的那些坑"><a href="#那些年我们踩过的那些坑" class="headerlink" title="那些年我们踩过的那些坑"></a>那些年我们踩过的那些坑</h2><h3 id="坑1-整数比较的坑"><a href="#坑1-整数比较的坑" class="headerlink" title="坑1 - 整数比较的坑"></a>坑1 - 整数比较的坑</h3><p>在 Python 中一切都是对象，整数也是对象，在比较两个整数时有两个运算符<code>==</code>和<code>is</code>，它们的区别是：</p>
+<ul>
+<li><code>is</code>比较的是两个整数对象的id值是否相等，也就是比较两个引用是否代表了内存中同一个地址。</li>
+<li><code>==</code>比较的是两个整数对象的内容是否相等，使用<code>==</code>时其实是调用了对象的<code>__eq__()</code>方法。</li>
+</ul>
+<p>知道了<code>is</code>和<code>==</code>的区别之后，我们可以来看看下面的代码，了解Python中整数比较有哪些坑：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	x = y = <span class="number">-1</span></span><br><span class="line">	<span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">		x += <span class="number">1</span></span><br><span class="line">		y += <span class="number">1</span></span><br><span class="line">		<span class="keyword">if</span> x <span class="keyword">is</span> y:</span><br><span class="line">			print(<span class="string">'%d is %d'</span> % (x, y))</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			print(<span class="string">'Attention! %d is not %d'</span> % (x, y))</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">			</span><br><span class="line">	x = y = <span class="number">0</span></span><br><span class="line">	<span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">		x -= <span class="number">1</span></span><br><span class="line">		y -= <span class="number">1</span></span><br><span class="line">		<span class="keyword">if</span> x <span class="keyword">is</span> y:</span><br><span class="line">			print(<span class="string">'%d is %d'</span> % (x, y))</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			print(<span class="string">'Attention! %d is not %d'</span> % (x, y))</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+<p>上面代码的部分运行结果如下图所示，出现这个结果的原因是Python出于对性能的考虑所做的一项优化。对于整数对象，Python把一些频繁使用的整数对象缓存起来，保存到一个叫<code>small_ints</code>的链表中，在Python的整个生命周期内，任何需要引用这些整数对象的地方，都不再重新创建新的对象，而是直接引用缓存中的对象。Python把频繁使用的整数对象的值定在[-5, 256]这个区间，如果需要这个范围的整数，就直接从<code>small_ints</code>中获取引用而不是临时创建新的对象。因为大于256或小于-5的整数不在该范围之内，所以就算两个整数的值是一样，但它们是不同的对象。</p>
+<p><img src="./res/int-is-comparation.png" alt=""></p>
+<p>当然仅仅如此这个坑就不值一提了，如果你理解了上面的规则，我们就再看看下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dis</span><br><span class="line">a = <span class="number">257</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	b = <span class="number">257</span>  <span class="comment"># 第6行</span></span><br><span class="line">	c = <span class="number">257</span>  <span class="comment"># 第7行</span></span><br><span class="line">	print(b <span class="keyword">is</span> c)  <span class="comment"># True</span></span><br><span class="line">	print(a <span class="keyword">is</span> b)  <span class="comment"># False</span></span><br><span class="line">	print(a <span class="keyword">is</span> c)  <span class="comment"># False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+<p>程序的执行结果已经用注释写在代码上了。够坑吧！看上去<code>a</code>、<code>b</code>和<code>c</code>的值都是一样的，但是<code>is</code>运算的结果却不一样。为什么会出现这样的结果，首先我们来说说Python程序中的代码块。所谓代码块是程序的一个最小的基本执行单位，一个模块文件、一个函数体、一个类、交互式命令中的单行代码都叫做一个代码块。上面的代码由两个代码块构成，<code>a = 257</code>是一个代码块，<code>main</code>函数是另外一个代码块。Python内部为了进一步提高性能，凡是在一个代码块中创建的整数对象，如果值不在<code>small_ints</code>缓存范围之内，但在同一个代码块中已经存在一个值与其相同的整数对象了，那么就直接引用该对象，否则创建一个新的对象出来，这条规则对不在<code>small_ints</code>范围的负数并不适用，对负数值浮点数也不适用，但对非负浮点数和字符串都是适用的，这一点读者可以自行证明。所以 <code>b is c</code>返回了<code>True</code>，而<code>a</code>和<code>b</code>不在同一个代码块中，虽然值都是257，但却是两个不同的对象，<code>is</code>运算的结果自然是<code>False</code>了。<br>为了验证刚刚的结论，我们可以借用<code>dis</code>模块（听名字就知道是进行反汇编的模块）从字节码的角度来看看这段代码。如果不理解什么是字节码，可以先看看<a href="(http://www.cnblogs.com/restran/p/4903056.html">《谈谈 Python 程序的运行原理》</a>)这篇文章。可以先用<code>import dis</code>导入<code>dis</code>模块并按照如下所示的方式修改代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">	main()</span><br><span class="line">	dis.dis(main)</span><br></pre></td></tr></table></figure>
+<p>代码的执行结果如下图所示。可以看出代码第6行和第7行，也就是<code>main</code>函数中的257是从同一个位置加载的，因此是同一个对象；而代码第9行的<code>a</code>明显是从不同的地方加载的，因此引用的是不同的对象。</p>
+<p><img src="./res/result-of-dis.png" alt=""></p>
+<p>如果还想对这个问题进行进一步深挖，推荐大家阅读<a href="https://foofish.net/python_int_implement.html" target="_blank" rel="noopener">《Python整数对象实现原理》</a>这篇文章。</p>
+<h3 id="坑2-嵌套列表的坑"><a href="#坑2-嵌套列表的坑" class="headerlink" title="坑2 - 嵌套列表的坑"></a>坑2 - 嵌套列表的坑</h3><p>Python中有一种内置的数据类型叫列表，它是一种容器，可以用来承载其他的对象（准确的说是其他对象的引用），列表中的对象可以称为列表的元素，很明显我们可以把列表作为列表中的元素，这就是所谓的嵌套列表。嵌套列表可以模拟出现实中的表格、矩阵、2D游戏的地图（如植物大战僵尸的花园）、棋盘（如国际象棋、黑白棋）等。但是在使用嵌套的列表时要小心，否则很可能遭遇非常尴尬的情况，下面是一个小例子。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	names = [<span class="string">'关羽'</span>, <span class="string">'张飞'</span>, <span class="string">'赵云'</span>, <span class="string">'马超'</span>, <span class="string">'黄忠'</span>]</span><br><span class="line">	subjs = [<span class="string">'语文'</span>, <span class="string">'数学'</span>, <span class="string">'英语'</span>]</span><br><span class="line">	scores = [[<span class="number">0</span>] * <span class="number">3</span>] * <span class="number">5</span></span><br><span class="line">	<span class="keyword">for</span> row, name <span class="keyword">in</span> enumerate(names):</span><br><span class="line">		print(<span class="string">'请输入%s的成绩'</span> % name)</span><br><span class="line">		<span class="keyword">for</span> col, subj <span class="keyword">in</span> enumerate(subjs):</span><br><span class="line">			scores[row][col] = float(input(subj + <span class="string">': '</span>))</span><br><span class="line">	print(scores)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+<p>我们希望录入5个学生3门课程的成绩，于是定义了一个有5个元素的列表，而列表中的每个元素又是一个由3个元素构成的列表，这样一个列表的列表刚好跟一个表格是一致的，相当于有5行3列，接下来我们通过嵌套的for-in循环输入每个学生3门课程的成绩。程序执行完成后我们发现，每个学生3门课程的成绩是一模一样的，而且就是最后录入的那个学生的成绩。</p>
+<p>要想把这个坑填平，我们首先要区分对象和对象的引用这两个概念，而要区分这两个概念，还得先说说内存中的栈和堆。我们经常会听人说起“堆栈”这个词，但实际上“堆”和“栈”是两个不同的概念。众所周知，一个程序运行时需要占用一些内存空间来存储数据和代码，那么这些内存从逻辑上又可以做进一步的划分。对底层语言（如C语言）有所了解的程序员大都知道，程序中可以使用的内存从逻辑上可以为五个部分，按照地址从高到低依次是：栈（stack）、堆（heap）、数据段（data segment）、只读数据段（static area）和代码段（code segment）。其中，栈用来存储局部、临时变量，以及函数调用时保存现场和恢复现场需要用到的数据，这部分内存在代码块开始执行时自动分配，代码块执行结束时自动释放，通常由编译器自动管理；堆的大小不固定，可以动态的分配和回收，因此如果程序中有大量的数据需要处理，这些数据通常都放在堆上，如果堆空间没有正确的被释放会引发内存泄露的问题，而像Python、Java等编程语言都使用了垃圾回收机制来实现自动化的内存管理（自动回收不再使用的堆空间）。所以下面的代码中，变量<code>a</code>并不是真正的对象，它是对象的引用，相当于记录了对象在堆空间的地址，通过这个地址我们可以访问到对应的对象；同理，变量<code>b</code>是列表容器的引用，它引用了堆空间上的列表容器，而列表容器中并没有保存真正的对象，它保存的也仅仅是对象的引用。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = object()</span><br><span class="line">b = [<span class="string">'apple'</span>, <span class="string">'pitaya'</span>, <span class="string">'grape'</span>]</span><br></pre></td></tr></table></figure>
+<p>知道了这一点，我们可以回过头看看刚才的程序，我们对列表进行<code>[[0] * 3] * 5</code>操作时，仅仅是将<code>[0, 0, 0]</code>这个列表的地址进行了复制，并没有创建新的列表对象，所以容器中虽然有5个元素，但是这5个元素引用了同一个列表对象，这一点可以通过<code>id</code>函数检查<code>scores[0]</code>和<code>scores[1]</code>的地址得到证实。所以正确的代码应该按照如下的方式进行修改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	names = [<span class="string">'关羽'</span>, <span class="string">'张飞'</span>, <span class="string">'赵云'</span>, <span class="string">'马超'</span>, <span class="string">'黄忠'</span>]</span><br><span class="line">	subjs = [<span class="string">'语文'</span>, <span class="string">'数学'</span>, <span class="string">'英语'</span>]</span><br><span class="line">	scores = [[]] * <span class="number">5</span></span><br><span class="line">	<span class="keyword">for</span> row, name <span class="keyword">in</span> enumerate(names):</span><br><span class="line">		print(<span class="string">'请输入%s的成绩'</span> % name)</span><br><span class="line">		scores[row] = [<span class="number">0</span>] * <span class="number">3</span></span><br><span class="line">		<span class="keyword">for</span> col, subj <span class="keyword">in</span> enumerate(subjs):</span><br><span class="line">			scores[row][col] = float(input(subj + <span class="string">': '</span>))</span><br><span class="line">	print(scores)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	names = [<span class="string">'关羽'</span>, <span class="string">'张飞'</span>, <span class="string">'赵云'</span>, <span class="string">'马超'</span>, <span class="string">'黄忠'</span>]</span><br><span class="line">	subjs = [<span class="string">'语文'</span>, <span class="string">'数学'</span>, <span class="string">'英语'</span>]</span><br><span class="line">	scores = [[<span class="number">0</span>] * <span class="number">3</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(<span class="number">5</span>)]</span><br><span class="line">	<span class="keyword">for</span> row, name <span class="keyword">in</span> enumerate(names):</span><br><span class="line">		print(<span class="string">'请输入%s的成绩'</span> % name)</span><br><span class="line">		scores[row] = [<span class="number">0</span>] * <span class="number">3</span></span><br><span class="line">		<span class="keyword">for</span> col, subj <span class="keyword">in</span> enumerate(subjs):</span><br><span class="line">			scores[row][col] = float(input(subj + <span class="string">': '</span>))</span><br><span class="line">	print(scores)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+<p>如果对内存的使用不是很理解，可以看看<a href="http://www.pythontutor.com/" target="_blank" rel="noopener">PythonTutor网站</a>上提供的代码可视化执行功能，通过可视化执行，我们可以看到内存是如何分配的，从而避免在使用嵌套列表或者复制对象时可能遇到的坑。</p>
+<p><img src="./res/python-tutor-visualize.png" alt=""></p>
+<p><img src="./res/python-tutor-visualize2.png" alt=""></p>
+<h3 id="坑3-访问修饰符的坑"><a href="#坑3-访问修饰符的坑" class="headerlink" title="坑3 - 访问修饰符的坑"></a>坑3 - 访问修饰符的坑</h3><p>用Python做过面向对象编程的人都知道，Python的类提供了两种访问控制权限，一种是公开，一种是私有（在属性或方法前加上双下划线）。而用惯了Java或C#这类编程语言的人都知道，类中的属性（数据抽象）通常都是私有的，其目的是为了将数据保护起来；而类中的方法（行为抽象）通常都是公开的，因为方法是对象向外界提供的服务。但是Python并没有从语法层面确保私有成员的私密性，因为它只是对类中所谓的私有成员进行了命名的变换，如果知道命名的规则照样可以直接访问私有成员，请看下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age)</span>:</span></span><br><span class="line">        self.__name = name</span><br><span class="line">        self.__age = age</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.__name + <span class="string">': '</span> + str(self.__age)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    stu = Student(<span class="string">'骆昊'</span>, <span class="number">38</span>)</span><br><span class="line">    <span class="comment"># 'Student' object has no attribute '__name'</span></span><br><span class="line">    <span class="comment"># print(stu.__name)</span></span><br><span class="line">    <span class="comment"># 用下面的方式照样可以访问类中的私有成员</span></span><br><span class="line">    print(stu._Student__name)</span><br><span class="line">    print(stu._Student__age)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>Python为什么要做出这样的设定呢？用一句广为流传的格言来解释这个问题：“We are all consenting adults here”（我们都是成年人）。这句话表达了很多Python程序员的一个共同观点，那就是开放比封闭要好，我们应该自己对自己的行为负责而不是从语言层面来限制对数据或方法的访问。</p>
+<p>所以在Python中我们实在没有必要将类中的属性或方法用双下划线开头的命名处理成私有的成员，因为这并没有任何实际的意义。如果想对属性或方法进行保护，我们建议用单下划线开头的受保护成员，虽然它也不能真正保护这些属性或方法，但是它相当于给调用者一个暗示，让调用者知道这是不应该直接访问的属性或方法，而且这样做并不影响子类去继承这些东西。</p>
+<p>需要提醒大家注意的是，Python类中的那些魔法方法，如<code>__str__</code>、<code>__repr__</code>等，这些方法并不是私有成员哦，虽然它们以双下划线开头，但是他们也是以双下划线结尾的，这种命名并不是私有成员的命名，这一点对初学者来说真的很坑。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -535,7 +1885,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -546,7 +1896,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
